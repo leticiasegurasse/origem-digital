@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { Search, CheckCircle, XCircle, MessageCircle } from 'lucide-react';
 import WhatsAppButton from './WhatsAppButton';
+import { COMPANY_INFO } from '../utils/company';
 
 interface CoverageResult {
   available: boolean;
@@ -58,9 +59,8 @@ const CoverageChecker = () => {
     // Na versão real, enviar para API
     const message = `Olá! Gostaria de ser avisado quando a Origem Digital chegar na minha região.\n\nNome: ${leadForm.name}\nBairro: ${leadForm.neighborhood}\nCEP: ${cep}`;
     
-    const phone = '5532999999999'; // Substitua pelo número real
     const encodedMessage = encodeURIComponent(message);
-    window.open(`https://wa.me/${phone}?text=${encodedMessage}`, '_blank', 'noopener,noreferrer');
+    window.open(`https://wa.me/${COMPANY_INFO.phone}?text=${encodedMessage}`, '_blank', 'noopener,noreferrer');
   };
 
   return (

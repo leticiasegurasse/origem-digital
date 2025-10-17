@@ -34,17 +34,17 @@ const AboutRebrand = ({ onLearnMoreClick }: AboutRebrandProps) => {
 
           {/* Título Principal */}
           <div className="text-center mb-12">
-            <h2 className="text-4xl md:text-6xl font-black text-white mb-6 leading-tight">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black text-white mb-6 leading-tight">
               De G2 Telecom para <br />
               <span className="text-yellow-300">Origem Digital</span>
             </h2>
-            <div className="flex items-center justify-center gap-4 mb-8">
-              <div className="bg-white/20 backdrop-blur-sm px-6 py-3 rounded-xl border-2 border-white/30">
-                <p className="text-2xl font-bold text-white">G2 Telecom</p>
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4 mb-8">
+              <div className="bg-white/20 backdrop-blur-sm px-4 sm:px-6 py-2 sm:py-3 rounded-xl border-2 border-white/30">
+                <p className="text-lg sm:text-xl md:text-2xl font-bold text-white whitespace-nowrap">G2 Telecom</p>
               </div>
-              <ArrowRight size={40} className="text-yellow-300 animate-pulse" />
-              <div className="bg-white px-6 py-3 rounded-xl border-2 border-yellow-300 shadow-xl">
-                <p className="text-2xl font-bold bg-gradient-to-r from-[var(--color-primary)] to-[var(--color-secondary)] bg-clip-text text-transparent">
+              <ArrowRight size={32} className="text-yellow-300 animate-pulse rotate-90 sm:rotate-0" />
+              <div className="bg-white px-4 sm:px-6 py-2 sm:py-3 rounded-xl border-2 border-yellow-300 shadow-xl">
+                <p className="text-lg sm:text-xl md:text-2xl font-bold bg-gradient-to-r from-[var(--color-primary)] to-[var(--color-secondary)] bg-clip-text text-transparent whitespace-nowrap">
                   Origem Digital
                 </p>
               </div>
@@ -71,14 +71,14 @@ const AboutRebrand = ({ onLearnMoreClick }: AboutRebrandProps) => {
               <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-br from-green-500 to-green-600 rounded-2xl mb-6 shadow-lg">
                 <CheckCircle2 size={32} className="text-white" />
               </div>
-              <h3 className="text-2xl font-bold text-gray-900 mb-4">
+              <h3 className="text-xl sm:text-2xl font-bold text-gray-900 mb-4">
                 O que continua igual?
               </h3>
-              <div className="grid grid-cols-2 gap-3">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                 {continuity.map((item, index) => (
                   <div key={index} className="flex items-center gap-2 text-gray-700">
-                    <span className="text-green-600">{item.icon}</span>
-                    <span className="font-semibold">{item.label}</span>
+                    <span className="text-green-600 flex-shrink-0">{item.icon}</span>
+                    <span className="font-semibold text-sm sm:text-base">{item.label}</span>
                   </div>
                 ))}
               </div>

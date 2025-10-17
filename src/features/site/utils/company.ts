@@ -4,9 +4,10 @@
 export const COMPANY_INFO = {
   name: 'Origem Digital',
   formerName: 'G2 Telecom',
-  cnpj: '00.000.000/0001-00', // Atualizar com CNPJ real
-  phone: '5532999999999', // Atualizar com número real
-  email: 'contato@origemdigital.com.br',
+  legalName: 'Telecomunicações S. Goncalves',
+  cnpj: '09.223.089/0001-20',
+  phone: '552240038398', // WhatsApp principal
+  email: 'atendimento@g2telecom.com',
   
   // Endereço principal
   address: {
@@ -18,16 +19,21 @@ export const COMPANY_INFO = {
 
   // Redes sociais
   social: {
-    facebook: 'https://facebook.com/origemdigital',
-    instagram: 'https://instagram.com/origemdigital',
-    linkedin: 'https://linkedin.com/company/origemdigital',
+    facebook: 'https://www.facebook.com/g2telecom',
+    instagram: 'https://www.instagram.com/origemdigitalnet',
+    linkedin: 'https://www.linkedin.com/company/g2telecom/',
   },
 
   // Horário de atendimento
   businessHours: {
-    weekdays: 'Segunda a Sexta: 8h às 18h',
-    saturday: 'Sábado: 8h às 12h',
-    sunday: 'Domingo: Fechado',
+    presencial: {
+      days: 'Segunda a sexta',
+      hours: '8h às 18h',
+    },
+    online: {
+      days: 'Segunda a domingo e feriados',
+      hours: '8h às 18h',
+    },
   },
 };
 

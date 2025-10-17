@@ -78,33 +78,33 @@ const CityPlansSelector = () => {
               >
                 {/* Badge Popular */}
                 {isPopular && (
-                  <div className="absolute -top-3 left-1/2 -translate-x-1/2 bg-gradient-to-r from-[var(--color-primary)] to-[var(--color-secondary)] text-white px-4 py-1 rounded-full text-xs font-bold uppercase shadow-lg">
+                  <div className="absolute -top-3 left-1/2 -translate-x-1/2 bg-[var(--color-primary)] text-white px-4 py-1 rounded-full text-xs font-bold uppercase shadow-lg">
                     Mais Popular
                   </div>
                 )}
 
                 {/* Velocidade */}
-                <div className="text-center mb-8 mt-2">
+                <div className="text-center mb-6 sm:mb-8 mt-2">
                   <div className={`font-black mb-2 ${
-                    isGiga ? 'text-7xl text-[var(--color-secondary)]' : 'text-6xl text-[var(--color-primary)]'
+                    isGiga ? 'text-5xl sm:text-6xl md:text-7xl text-[var(--color-secondary)]' : 'text-4xl sm:text-5xl md:text-6xl text-[var(--color-primary)]'
                   }`}>
                     {isGiga ? '1GB' : plan.speed}
                   </div>
-                  <div className="text-gray-600 font-bold text-base uppercase tracking-wide">
+                  <div className="text-gray-600 font-bold text-sm sm:text-base uppercase tracking-wide">
                     {isGiga ? 'Giga' : 'Mega'}
                   </div>
                 </div>
 
                 {/* Preço */}
-                <div className="text-center mb-8 pb-8 border-b-2 border-gray-100">
-                  <div className="text-sm text-gray-500 mb-2 uppercase tracking-wide font-semibold">a partir de</div>
+                <div className="text-center mb-6 sm:mb-8 pb-6 sm:pb-8 border-b-2 border-gray-100">
+                  <div className="text-xs sm:text-sm text-gray-500 mb-2 uppercase tracking-wide font-semibold">a partir de</div>
                   <div className="flex items-start justify-center gap-1 mb-1">
-                    <span className="text-xl font-bold text-gray-700 mt-2">R$</span>
-                    <span className="text-5xl font-black text-[var(--color-secondary)]">
+                    <span className="text-lg sm:text-xl font-bold text-gray-700 mt-1 sm:mt-2">R$</span>
+                    <span className="text-3xl sm:text-4xl md:text-5xl font-black text-[var(--color-secondary)]">
                       {plan.price.toFixed(2).replace('.', ',')}
                     </span>
                   </div>
-                  <div className="text-base text-gray-600 font-semibold">/mês</div>
+                  <div className="text-sm sm:text-base text-gray-600 font-semibold">/mês</div>
                 </div>
 
                 {/* Benefícios */}
@@ -119,13 +119,9 @@ const CityPlansSelector = () => {
 
                 {/* CTA Principal */}
                 <WhatsAppButton
-                  variant="primary"
+                  variant={isPopular ? "secondary" : "primary"}
                   message={`Olá! Gostaria de assinar o plano de ${isGiga ? '1GB' : plan.speed + ' Mega'} por R$ ${plan.price.toFixed(2)} em ${selectedCity}.`}
-                  className={`w-full justify-center text-base py-4 ${
-                    isPopular 
-                      ? 'bg-gradient-to-r from-[var(--color-primary)] to-[var(--color-secondary)] hover:opacity-90' 
-                      : ''
-                  }`}
+                  className={`w-full justify-center text-base py-4`}
                   utm={{ source: 'planos', medium: 'website', campaign: `plano-${plan.speed}mb` }}
                 >
                   <MessageCircle size={20} />
@@ -137,10 +133,14 @@ const CityPlansSelector = () => {
         </div>
 
         {/* Observação Legal Melhorada */}
-        <div className="bg-gray-100 rounded-xl p-6 max-w-4xl mx-auto">
+        <div className="bg-gray-100 rounded-xl p-6 max-w-4xl mx-auto space-y-3">
           <p className="text-center text-sm text-gray-600 leading-relaxed">
             <strong>Informações importantes:</strong> Valores mensais. Consulte condições específicas, disponibilidade e requisitos técnicos 
             para instalação em sua região. Sujeito à análise de viabilidade técnica.
+          </p>
+          <p className="text-center text-sm text-gray-600 leading-relaxed">
+            <strong>* Instalação grátis:</strong> Consulte o regulamento para conhecer as condições de instalação e demais termos contratuais. 
+            Entre em contato via WhatsApp para mais informações.
           </p>
         </div>
       </div>

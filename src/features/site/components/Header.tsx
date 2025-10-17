@@ -8,11 +8,10 @@ const Header = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   const menuLinks = [
-    { to: '/planos', label: 'Planos' },
-    { to: '/cobertura', label: 'Cobertura' },
-    { to: '/empresas', label: 'Para Empresas' },
-    { to: '/suporte', label: 'Suporte' },
-    { to: '/minha-conta', label: 'Minha Conta' },
+    { to: '#planos', label: 'Planos' },
+    { to: '#cobertura', label: 'Cobertura' },
+    { to: '#empresas', label: 'Para Empresas' },
+    { to: '#suporte', label: 'Suporte' },
   ];
 
   return (
@@ -44,7 +43,7 @@ const Header = () => {
               message="Olá! Gostaria de saber mais sobre os planos da Origem Digital."
             >
               <MessageCircle size={20} />
-              <span>WhatsApp Vendas</span>
+              <span>WhatsApp Suporte</span>
             </WhatsAppButton>
             <Link
               to="/assinar"

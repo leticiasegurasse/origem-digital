@@ -22,12 +22,12 @@ const FAQ = () => {
       answer: 'Sim! Todos os nossos planos incluem o roteador Wi-Fi em comodato, sem custo adicional. Planos a partir de 600 Mega incluem roteadores com tecnologia Wi-Fi 6.',
     },
     {
-      question: 'Tem fidelidade?',
-      answer: 'Não exigimos fidelidade nos nossos planos. Você pode cancelar quando quiser, respeitando apenas o período de 30 dias de aviso prévio.',
+      question: 'Quais as condições do contrato?',
+      answer: 'Para conhecer todas as condições contratuais, incluindo fidelidade e termos de instalação, consulte nosso regulamento completo. Entre em contato via WhatsApp para receber mais informações.',
     },
     {
       question: 'Qual a diferença entre os planos?',
-      answer: 'A principal diferença é a velocidade de download e upload. Planos mais altos também incluem tecnologia Wi-Fi 6 para melhor cobertura e desempenho. Todos incluem instalação gratuita e suporte local.',
+      answer: 'A principal diferença é a velocidade de download e upload. Planos mais altos também incluem tecnologia Wi-Fi 6 para melhor cobertura e desempenho. Consulte as condições de cada plano.',
     },
   ];
 
@@ -64,34 +64,34 @@ const FAQ = () => {
       <div className="container mx-auto px-4">
         {/* Ações Rápidas */}
         <div className="mb-20">
-          <div className="text-center mb-12">
-            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+          <div className="text-center mb-10 sm:mb-12 px-4">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-4">
               Suporte & Autoatendimento
             </h2>
-            <p className="text-xl text-gray-600">
+            <p className="text-lg sm:text-xl text-gray-600">
               Resolva suas dúvidas rapidamente
             </p>
           </div>
           
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-5xl mx-auto">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6 max-w-5xl mx-auto">
             {quickActions.map((action, index) => (
               <a
                 key={index}
                 href={action.link}
                 target={action.external ? '_blank' : undefined}
                 rel={action.external ? 'noopener noreferrer' : undefined}
-                className="group bg-white p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 text-center border-2 border-gray-100 hover:border-[var(--color-primary)] hover:-translate-y-2 relative overflow-hidden"
+                className="group bg-white p-6 sm:p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 text-center border-2 border-gray-100 hover:border-[var(--color-primary)] hover:-translate-y-2 relative overflow-hidden"
               >
                 {/* Background gradient on hover */}
                 <div className="absolute inset-0 bg-gradient-to-br from-[var(--color-primary)]/5 to-[var(--color-secondary)]/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                 
                 {/* Conteúdo */}
                 <div className="relative z-10">
-                  <div className="inline-flex items-center justify-center w-20 h-20 rounded-full bg-gradient-to-br from-[var(--color-primary)] to-[var(--color-secondary)] text-white mb-4 group-hover:scale-110 transition-transform duration-300 shadow-lg">
+                  <div className="inline-flex items-center justify-center w-16 h-16 sm:w-20 sm:h-20 rounded-full bg-gradient-to-br from-[var(--color-primary)] to-[var(--color-secondary)] text-white mb-3 sm:mb-4 group-hover:scale-110 transition-transform duration-300 shadow-lg">
                     {action.icon}
                   </div>
-                  <h3 className="font-bold text-gray-900 text-base mb-2">{action.title}</h3>
-                  <p className="text-sm text-gray-600">{action.description}</p>
+                  <h3 className="font-bold text-gray-900 text-sm sm:text-base mb-1 sm:mb-2">{action.title}</h3>
+                  <p className="text-xs sm:text-sm text-gray-600">{action.description}</p>
                   
                   {action.external && (
                     <ExternalLink size={16} className="inline-block text-[var(--color-primary)] mt-2 group-hover:translate-x-1 transition-transform" />
@@ -103,15 +103,15 @@ const FAQ = () => {
         </div>
 
         {/* FAQ */}
-        <div className="max-w-4xl mx-auto">
-          <div className="text-center mb-12">
-            <div className="inline-flex items-center justify-center w-20 h-20 rounded-full bg-gradient-to-br from-[var(--color-primary)] to-[var(--color-secondary)] text-white mb-6 shadow-xl">
-              <HelpCircle size={40} />
+        <div className="max-w-4xl mx-auto px-4">
+          <div className="text-center mb-10 sm:mb-12">
+            <div className="inline-flex items-center justify-center w-16 h-16 sm:w-20 sm:h-20 rounded-full bg-gradient-to-br from-[var(--color-primary)] to-[var(--color-secondary)] text-white mb-4 sm:mb-6 shadow-xl">
+              <HelpCircle size={32} className="sm:w-10 sm:h-10" />
             </div>
-            <h3 className="text-4xl font-bold text-gray-900 mb-3">
+            <h3 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-3">
               Perguntas Frequentes
             </h3>
-            <p className="text-lg text-gray-600">
+            <p className="text-base sm:text-lg text-gray-600">
               Encontre respostas para as dúvidas mais comuns
             </p>
           </div>
@@ -128,11 +128,11 @@ const FAQ = () => {
               >
                 <button
                   onClick={() => setOpenIndex(openIndex === index ? null : index)}
-                  className="w-full px-8 py-6 flex items-start justify-between text-left hover:bg-gray-50 transition-colors group"
+                  className="w-full px-4 sm:px-6 md:px-8 py-4 sm:py-5 md:py-6 flex items-start justify-between text-left hover:bg-gray-50 transition-colors group"
                 >
-                  <div className="flex items-start gap-4 flex-1">
+                  <div className="flex items-start gap-3 sm:gap-4 flex-1">
                     {/* Número da pergunta */}
-                    <div className={`flex-shrink-0 w-10 h-10 rounded-full flex items-center justify-center font-bold text-lg transition-colors ${
+                    <div className={`flex-shrink-0 w-8 h-8 sm:w-10 sm:h-10 rounded-full flex items-center justify-center font-bold text-base sm:text-lg transition-colors ${
                       openIndex === index
                         ? 'bg-gradient-to-br from-[var(--color-primary)] to-[var(--color-secondary)] text-white'
                         : 'bg-gray-100 text-gray-600 group-hover:bg-gray-200'
@@ -141,7 +141,7 @@ const FAQ = () => {
                     </div>
                     
                     {/* Pergunta */}
-                    <span className="font-bold text-gray-900 text-lg pr-4 pt-1">
+                    <span className="font-bold text-gray-900 text-sm sm:text-base md:text-lg pr-2 sm:pr-4 pt-0.5 sm:pt-1">
                       {faq.question}
                     </span>
                   </div>
@@ -150,7 +150,7 @@ const FAQ = () => {
                   <div className={`flex-shrink-0 transition-all duration-300 ${
                     openIndex === index ? 'rotate-180 text-[var(--color-primary)]' : 'text-gray-400'
                   }`}>
-                    <ChevronDown size={28} />
+                    <ChevronDown size={24} className="sm:w-7 sm:h-7" />
                   </div>
                 </button>
                 
@@ -158,9 +158,9 @@ const FAQ = () => {
                 <div className={`transition-all duration-300 overflow-hidden ${
                   openIndex === index ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'
                 }`}>
-                  <div className="px-8 pb-6 pl-[88px]">
-                    <div className="bg-gradient-to-r from-gray-50 to-transparent p-6 rounded-xl border-l-4 border-[var(--color-primary)]">
-                      <p className="text-gray-700 text-base leading-relaxed">
+                  <div className="px-4 sm:px-6 md:px-8 pb-4 sm:pb-5 md:pb-6 pl-4 sm:pl-16 md:pl-[88px]">
+                    <div className="bg-gradient-to-r from-gray-50 to-transparent p-4 sm:p-5 md:p-6 rounded-xl border-l-4 border-[var(--color-primary)]">
+                      <p className="text-gray-700 text-sm sm:text-base leading-relaxed">
                         {faq.answer}
                       </p>
                     </div>

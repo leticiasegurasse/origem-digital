@@ -12,13 +12,14 @@ const AnnouncementBar = ({ onLearnMoreClick }: AnnouncementBarProps) => {
 
   return (
     <div className="text-white py-3 px-4 relative bg-[var(--color-secondary)]">
-      <div className="container mx-auto flex items-center justify-center gap-2 text-sm md:text-base">
+      <div className="container mx-auto flex flex-col sm:flex-row items-center justify-center gap-2 text-xs sm:text-sm md:text-base pr-8 sm:pr-4">
         <p className="text-center">
-          <span className="font-semibold">G2 Telecom agora é Origem Digital</span> — novo nome, nova tecnologia, mesma confiança.
+          <span className="font-semibold">G2 Telecom agora é Origem Digital</span>
+          <span className="hidden sm:inline"> — novo nome, nova tecnologia, mesma confiança.</span>
         </p>
         <button
           onClick={onLearnMoreClick}
-          className="underline hover:no-underline font-medium whitespace-nowrap"
+          className="underline hover:no-underline font-medium whitespace-nowrap text-xs sm:text-sm md:text-base"
           aria-label="Saiba mais sobre a mudança"
         >
           Saiba mais
@@ -26,10 +27,10 @@ const AnnouncementBar = ({ onLearnMoreClick }: AnnouncementBarProps) => {
       </div>
       <button
         onClick={() => setIsVisible(false)}
-        className="absolute right-4 top-1/2 -translate-y-1/2 hover:opacity-80 transition-opacity"
+        className="absolute right-2 sm:right-4 top-1/2 -translate-y-1/2 hover:opacity-80 transition-opacity"
         aria-label="Fechar anúncio"
       >
-        <X size={20} />
+        <X size={18} className="sm:w-5 sm:h-5" />
       </button>
     </div>
   );

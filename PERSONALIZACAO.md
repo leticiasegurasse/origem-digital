@@ -50,7 +50,7 @@ Este projeto usa **variáveis CSS** definidas no `:root` para máxima flexibilid
 3. `src/components/Footer.tsx` - Linhas 87 e 97
 4. `src/constants/company.ts` - Linha 10
 
-**Formato**: `5532999999999` (sem espaços, sem parênteses)
+**Formato**: `552240038398` (sem espaços, sem parênteses)
 - `55` = código do Brasil
 - `32` = DDD
 - `999999999` = número com 9 dígitos
@@ -63,7 +63,7 @@ Este projeto usa **variáveis CSS** definidas no `:root` para máxima flexibilid
 export const COMPANY_INFO = {
   name: 'Origem Digital',
   cnpj: '00.000.000/0001-00',      // ← ATUALIZAR
-  phone: '5532999999999',           // ← ATUALIZAR
+  phone: '552240038398',           // ← ATUALIZAR
   email: 'contato@origemdigital.com.br', // ← ATUALIZAR
   
   address: {
@@ -97,7 +97,7 @@ Para adicionar/editar planos de uma cidade:
       price: 79.90,            // ← Preço mensal
       benefits: [              // ← Benefícios inclusos
         'Wi-Fi incluso',
-        'Sem fidelidade',
+        'Instalação grátis*',
         'Suporte local'
       ],
       hasWifi6: false,         // ← true se incluir Wi-Fi 6

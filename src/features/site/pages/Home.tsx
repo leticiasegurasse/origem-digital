@@ -37,8 +37,8 @@ const Home = () => {
           <CoverageChecker />
         </div> */}
         <WhyOrigemDigital />
-        <AboutRebrand onLearnMoreClick={() => setIsModalOpen(true)} />
-        <FAQ />
+        {/* <AboutRebrand onLearnMoreClick={() => setIsModalOpen(true)} /> */}
+        {/* <FAQ /> */}
         <FinalCTA />
       </main>
 

@@ -49,11 +49,11 @@ const WhyOrigemDigital = () => {
     <section className="py-20 bg-gradient-to-b from-gray-50 to-white">
       <div className="container mx-auto px-4">
         {/* Header da Seção */}
-        <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+        <div className="text-center mb-12 sm:mb-16">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-4 px-4">
             Por que a Origem Digital?
           </h2>
-          <p className="text-xl md:text-2xl text-gray-600 max-w-3xl mx-auto">
+          <p className="text-lg sm:text-xl md:text-2xl text-gray-600 max-w-3xl mx-auto px-4">
             Conectamos sua rotina com estabilidade de verdade
           </p>
         </div>
@@ -66,7 +66,7 @@ const WhyOrigemDigital = () => {
               className="group bg-white p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 text-center border border-gray-100 hover:border-[var(--color-primary)] hover:-translate-y-2"
             >
               {/* Ícone com Background Circular */}
-              <div className="inline-flex items-center justify-center w-24 h-24 rounded-full bg-gradient-to-br from-[var(--color-primary)] to-[var(--color-secondary)] text-white mb-6 group-hover:scale-110 transition-transform duration-300 shadow-lg">
+              <div className="inline-flex items-center justify-center w-24 h-24 rounded-full bg-[var(--color-secondary)] text-white mb-6 group-hover:scale-110 transition-transform duration-300 shadow-lg">
                 {reason.icon}
               </div>
               
@@ -84,7 +84,7 @@ const WhyOrigemDigital = () => {
         </div>
 
         {/* Depoimentos - Seção Redesenhada */}
-        <div className="bg-gradient-to-br from-[var(--color-primary)] to-[var(--color-secondary)] rounded-3xl p-8 md:p-12 shadow-2xl">
+        <div className="bg-[var(--color-primary)] rounded-3xl p-8 md:p-12 shadow-2xl">
           <div className="text-center mb-12">
             <h3 className="text-3xl md:text-4xl font-bold text-white mb-3">
               O que nossos clientes dizem

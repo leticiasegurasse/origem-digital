@@ -1,4 +1,5 @@
 import type { ReactNode } from 'react';
+import { COMPANY_INFO } from '../utils/company';
 
 interface WhatsAppButtonProps {
   children: ReactNode;
@@ -16,7 +17,7 @@ interface WhatsAppButtonProps {
 const WhatsAppButton = ({
   children,
   message = 'Olá! Gostaria de mais informações.',
-  phone = '5532999999999', // Substitua pelo número real
+  phone = COMPANY_INFO.phone, // Número centralizado
   variant = 'primary',
   className = '',
   utm,

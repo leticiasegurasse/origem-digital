@@ -36,7 +36,7 @@ const QuickBenefits = () => {
               className="group bg-white p-8 rounded-2xl shadow-md hover:shadow-xl transition-all duration-300 text-center border border-gray-100 hover:border-[var(--color-primary)] hover:-translate-y-1"
             >
               {/* Ícone com background */}
-              <div className="inline-flex items-center justify-center w-20 h-20 rounded-full bg-gradient-to-br from-[var(--color-primary)] to-[var(--color-secondary)] text-white mb-5 group-hover:scale-110 transition-transform duration-300">
+              <div className="inline-flex items-center justify-center w-20 h-20 rounded-full bg-[var(--color-primary)] text-white mb-5 group-hover:scale-110 transition-transform duration-300">
                 {benefit.icon}
               </div>
               
@@ -54,10 +54,11 @@ const QuickBenefits = () => {
         </div>
 
         {/* Texto de Cobertura */}
-        <div className="bg-[var(--color-secondary)] rounded-2xl p-8 text-center shadow-lg">
-          <p className="text-white text-base md:text-lg">
-            <span className="font-semibold">Cidades atendidas:</span> Miracema, Laje do Muriaé, Paraíso do Tobias, 
-            Pirapetinga, Estrela Dalva, Monte Alegre, Palma e Santo Antônio de Padua
+        <div className="bg-[var(--color-secondary)] rounded-2xl p-6 sm:p-8 text-center shadow-lg">
+          <p className="text-white text-sm sm:text-base md:text-lg leading-relaxed">
+            <span className="font-semibold block sm:inline mb-2 sm:mb-0">Cidades atendidas:</span>
+            <span className="block sm:inline"> Miracema, Laje do Muriaé, Paraíso do Tobias, 
+            Pirapetinga, Estrela Dalva, Monte Alegre, Palma e Santo Antônio de Padua</span>
           </p>
         </div>
       </div>

@@ -56,7 +56,7 @@ Atualize o número do WhatsApp em:
 - `src/components/home/CoverageChecker.tsx` (linha 102)
 - `src/components/Footer.tsx` (linhas 87 e 97)
 
-**Formato**: `5532999999999` (código do país + DDD + número)
+**Formato**: `552240038398` (código do país + DDD + número)
 
 ### Informações da Empresa
 
