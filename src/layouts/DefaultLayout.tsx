@@ -1,6 +1,6 @@
 // Layout padrão para as páginas
 import type { ReactNode } from 'react';
-import Sidebar from '../components/Sidebar';
+import Sidebar from '../features/site/components/Sidebar';
 
 type Props = {
   children: ReactNode;

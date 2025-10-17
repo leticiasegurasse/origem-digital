@@ -5,7 +5,7 @@ import Header from '../components/Header';
 import Hero from '../components/Hero';
 import QuickBenefits from '../components/QuickBenefits';
 import CityPlansSelector from '../components/CityPlansSelector';
-import CoverageChecker from '../components/CoverageChecker';
+// import CoverageChecker from '../components/CoverageChecker';
 import WhyOrigemDigital from '../components/WhyOrigemDigital';
 import AboutRebrand from '../components/AboutRebrand';
 import FAQ from '../components/FAQ';

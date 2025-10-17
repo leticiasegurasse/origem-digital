@@ -4,10 +4,10 @@ import mascoteImage from '../../../assets/image/mascote-hero.jpg';
 import logo from '../../../assets/image/logo-hero.png'
 
 interface HeroProps {
-  onCheckCoverage: (cep: string) => void;
+  onCheckCoverage?: (cep: string) => void;
 }
 
-const Hero = ({ onCheckCoverage }: HeroProps) => {
+const Hero = ({ onCheckCoverage: _onCheckCoverage }: HeroProps) => {
 
   return (
     <section className="py-16 md:py-0 text-white">
